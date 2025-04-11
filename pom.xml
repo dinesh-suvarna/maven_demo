@@ -38,7 +38,7 @@
          <archive>
           <manifest>
             <addClasspath>true</addClasspath>
-            <mainClass>com.maven.demo.Main</mainClass> 
+            <mainClass>com.maven.demo.mavensimple</mainClass> 
           </manifest>
         </archive>
         </configuration>
