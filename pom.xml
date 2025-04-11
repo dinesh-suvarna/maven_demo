@@ -28,6 +28,8 @@
 
   <build>
     <plugins>
+
+      <!-- Java 17 configuration -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -35,14 +37,24 @@
         <configuration>
           <source>17</source>
           <target>17</target>
-         <archive>
-          <manifest>
-            <addClasspath>true</addClasspath>
-            <mainClass>com.maven.demo.mavensimple</mainClass> 
-          </manifest>
-        </archive>
         </configuration>
       </plugin>
+
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.2</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>com.maven.demo.mavensimple.App</mainClass> 
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+
     </plugins>
   </build>
 
